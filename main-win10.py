@@ -4,7 +4,7 @@ import requests
 
 
 def send_feedback(raw_dir):
-    external_ip = "128.0.0.0"
+    external_ip = "35.238.167.86"
 
     for file in os.listdir(raw_dir):
         file_path = os.path.join(raw_dir, file)
@@ -16,7 +16,7 @@ def send_feedback(raw_dir):
             feedback_dict = create_feedback_dict(feedback_content)
 
             # Send feedback.
-            web_address = "https://" + external_ip + "/feedback"
+            web_address = "http://" + external_ip + "/feedback/"
             response = requests.post(web_address, json=feedback_dict)
 
             # Print status.
