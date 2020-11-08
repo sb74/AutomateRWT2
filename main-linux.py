@@ -39,8 +39,5 @@ def create_feedback_dict(content):
 
 
 if __name__ == '__main__':
-    # Linux home directory.
-    home = os.path.expanduser("~")
-
-    raw_location = home + r"/data/feedback"
+    raw_location = r"/data/feedback"
     send_feedback(raw_location)
