@@ -16,7 +16,7 @@ def send_feedback(raw_dir):
             feedback_dict = create_feedback_dict(feedback_content)
 
             # Send feedback.
-            web_address = "https://" + external_ip + "/feedback"
+            web_address = "http://" + external_ip + "/feedback"
             response = requests.post(web_address, json=feedback_dict)
 
             # Print status.
